@@ -1,5 +1,5 @@
 // Load the data with d3.csv()
-d3.csv("men-simulation-d3.csv").then((data) => {
+d3.csv("./assets/simulation-d3.csv").then((data) => {
   const margin = { top: 30, right: 20, bottom: 20, left: 100 };
   const height = 350 - margin.top - margin.bottom;
 
