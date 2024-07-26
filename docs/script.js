@@ -1,7 +1,7 @@
 // Load the data with d3.csv()
 d3.csv("./assets/simulation-d3.csv").then((data) => {
   const margin = { top: 30, right: 20, bottom: 20, left: 100 };
-  const height = 350 - margin.top - margin.bottom;
+  const height = 360 - margin.top - margin.bottom;
 
   // Get the parent container's width
   const containerWidth = d3
@@ -33,7 +33,7 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
     .attr("x", 0)
     .attr("y", 121) // Set the y-position for the second rectangle
     .attr("width", width)
-    .attr("height", 170) // Set the height for the second rectangle
+    .attr("height", 188) // Set the height for the second rectangle
     .attr("fill", "#F4E9F4");
 
   // Define a circular clipPath
