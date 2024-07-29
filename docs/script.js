@@ -33,8 +33,16 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
     .attr("x", 0)
     .attr("y", 121) // Set the y-position for the second rectangle
     .attr("width", width)
-    .attr("height", 188) // Set the height for the second rectangle
+    .attr("height", 123) // Set the height for the second rectangle
     .attr("fill", "#F4E9F4");
+
+    svg
+    .append("rect")
+    .attr("x", 0)
+    .attr("y", 248) // Set the y-position for the second rectangle
+    .attr("width", width)
+    .attr("height", 61) // Set the height for the second rectangle
+    .attr("fill", "#F4F4F4");
 
   // Define a circular clipPath
   svg
