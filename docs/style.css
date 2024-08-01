@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-size: 20px;
+  color: #121212;
   font-family: "Noto Serif", "Times New Roman", Helvetica, serif;
   text-rendering: optimizeLegibility;
 }
@@ -20,7 +21,19 @@ body {
 }
 
 a {
-  color: #f05349;
+  /* color: #f4f4f4; */
+  color: #121212;
+  text-decoration: none;
+  padding: 0.2rem 0 0;
+  background-image: linear-gradient(to right, #ffe462 0, #ffe462 100%);
+  background-size: 100% 20%;
+  background-position-y: 17px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+a:hover {
+  background-size: 100% 100%;
 }
 
 .footer {
