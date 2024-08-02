@@ -12,9 +12,7 @@ The data I used:
 - combined_men_2004-2024.csv
 - combined_woman_2004-2024.csv
 
-All Data where collected from the World Athletics (WA) federation Website.
-
-I collected the data of the 100 fastest men's and women's times for the years 2004 to 2023 from the <a href="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2024?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=seniors">World Athletics (WA) federation</a> and combined them in a Jupyter notebook to analyze the data.
+All Data where collected from the <a href="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2024?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=seniors">World Athletics (WA) federation</a> website.
 
 **Data analysis**:\
 I used Playwright for browser automation to save a list of the 100 fastest runners per year and gender as a CSV file from the World Athletics website. This saved me from manually downloading data for all twenty years for each gender. I then combined all the years into a single DataFrame to analyze the data as a complete time series. For comparing the running times, I had to convert the times from HH:MM:SS to seconds. Additionally, I needed extra columns such as the year or ISO country code uniformly in my DataFrame for analysis or visualization purposes. For displaying the flags in the Datawrapper tooltip, for example, I needed the ISO country code in ISO alpha-3 format. To reformat country codes, the Python library "pycountry" can be used, which provides access to the ISO 3166-1 country database.
