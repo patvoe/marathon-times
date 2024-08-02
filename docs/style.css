@@ -40,7 +40,7 @@ body {
   /* White text with a shadow */
   color: white;
   /* color: #121212; */
-  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.8),
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.7),
       0px 0px 5px rgba(0, 0, 0, 0.1);
 
   /* background-size: cover;
