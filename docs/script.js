@@ -1,6 +1,6 @@
 // Load the data with d3.csv()
 d3.csv("./assets/simulation-d3.csv").then((data) => {
-  const margin = { top: 30, right: 20, bottom: 20, left: 100 };
+  const margin = { top: 30, right: 20, bottom: 20, left: 101 };
   const height = 360 - margin.top - margin.bottom;
 
   // Get the parent container's width
@@ -36,7 +36,7 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
     .attr("height", 123) // Set the height for the second rectangle
     .attr("fill", "#F4E9F4");
 
-    svg
+  svg
     .append("rect")
     .attr("x", 0)
     .attr("y", 248) // Set the y-position for the second rectangle
@@ -78,11 +78,13 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
     .attr("class", "axis x grid")
     .call(
       xAxis.tickFormat((d, i, nodes) => {
+        const formattedNumber = d3.format(",")(d); // Format the number with commas
+
         // Check if it's the last tick
         if (i === nodes.length - 1) {
-          return d + " m";
+          return formattedNumber + " m";
         }
-        return d;
+        return formattedNumber;
       })
     )
     .attr("transform", `translate(0, ${height})`);

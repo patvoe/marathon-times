@@ -20,6 +20,40 @@ body {
   padding: 3em 0;
 }
 
+.with-image-bg {
+  background-image: url("./assets/cover-image.jpg");
+  @media (max-width: 640px) {
+    background-image: url("./assets/cover-image.jpg");
+  }
+
+  position: relative;
+  background-size: cover;
+  /* margin-bottom: 2em; */
+  /* filter: grayscale(30%); */
+  /* Center everything inside */
+  min-height: 80svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center 100%;
+
+  /* White text with a shadow */
+  color: white;
+  /* color: #121212; */
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9),
+      0px 0px 5px rgba(0, 0, 0, 0.3);
+
+  /* background-size: cover;
+  background-position: center;
+  margin-bottom: 2em;
+  min-height: 70svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.131), 0px 0px 10px rgba(0, 0, 0, 0.025); */
+}
+
 a {
   /* color: #f4f4f4; */
   color: #121212;
@@ -62,10 +96,10 @@ figcaption {
 h1 {
   font-family: "Suez One", serif;
   font-weight: bold;
-  font-size: 3em;
-  line-height: 1.1;
+  font-size: 2.8em;
+  line-height: 1.15;
   @media (max-width: 640px) {
-    font-size: 2.6em;
+    font-size: 2.2em;
   }
 }
 
@@ -87,6 +121,7 @@ h2 {
 .subhead {
   font-family: "Noto Serif", "Times New Roman", Helvetica, serif;
   font-size: 1.1em;
+  line-height: 1.4;
 }
 
 iframe,
@@ -124,6 +159,48 @@ code {
 .finish-label {
   font-family: IBM Plex Sans, Helvetica, Arial, Verdana, Helvetica;
   font-size: 12px;
+}
+
+.legend {
+  font-family: IBM Plex Sans, Helvetica, Arial, Verdana, Helvetica;
+  font-size: 0.75em;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .entry {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+  }
+
+  .entry div:first-of-type {
+    border-radius: 50%;
+  }
+
+  .entry:first-of-type div:first-of-type {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    background-color: #378EBD;
+  }
+
+  .entry:nth-of-type(2) div:first-of-type {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    background-color: #A757A3;
+  }
+}
+
+.imageByline {
+  font-size: 0.75em;
+  font-family: "IBM Plex Sans", "Helvetica", Arial, Verdana, Helvetica;
+  padding-top: 10px;
+  line-height: 1.4;
+  margin-bottom: 3.5em;
+  color:#7D7D7D;
 }
 
 /* margin on mobile */
