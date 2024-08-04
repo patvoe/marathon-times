@@ -221,6 +221,14 @@ code {
   color:#7D7D7D;
 }
 
+span.menTime {
+  color: #378EBD;
+}
+
+span.womanTime {
+  color: #A757A3;
+}
+
 /* margin on mobile */
 @media (max-width: 640px) {
   body {
