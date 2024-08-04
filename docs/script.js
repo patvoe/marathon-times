@@ -476,7 +476,7 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
     bars.attr("width", 0);
     icons.attr(
       "transform",
-      (d) => `translate(-5, ${y(d.year) + y.bandwidth() / 2 - 10})`
+      (d) => `translate(-10, ${y(d.year) + y.bandwidth() / 2 - 10})`
     );
     nameLabels.style("display", "none");
     nameLabels.selectAll(".time-or-meters").text((d) => d.info); // Update the text content
