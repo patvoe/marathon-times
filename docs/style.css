@@ -259,7 +259,7 @@ span.womanTime {
   border: none;
   background-color: #202346;
   color: #fff;
-  &:hover {
+  &:hover, &:active {
     opacity: 0.66;
   }
 }
