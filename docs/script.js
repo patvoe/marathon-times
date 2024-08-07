@@ -1,6 +1,6 @@
 // Load the data with d3.csv()
 d3.csv("./assets/simulation-d3.csv").then((data) => {
-  const margin = { top: 30, right: 20, bottom: 20, left: 101 };
+  const margin = { top: 30, right: 20, bottom: 20, left: 105 };
   const height = 360 - margin.top - margin.bottom;
 
   // Get the parent container's width
