@@ -335,18 +335,18 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
   let firstPersonFinishedF = false;
   let firstPersonFinishTimeF = 0;
 
-  function formatTime(seconds) {
-    const h = Math.floor(seconds / 3600)
-      .toString()
-      .padStart(2, "0");
-    const m = Math.floor((seconds % 3600) / 60)
-      .toString()
-      .padStart(2, "0");
-    const s = Math.floor(seconds % 60)
-      .toString()
-      .padStart(2, "0");
-    return `${h}:${m}:${s}`;
-  }
+  // function formatTime(seconds) {
+  //   const h = Math.floor(seconds / 3600)
+  //     .toString()
+  //     .padStart(2, "0");
+  //   const m = Math.floor((seconds % 3600) / 60)
+  //     .toString()
+  //     .padStart(2, "0");
+  //   const s = Math.floor(seconds % 60)
+  //     .toString()
+  //     .padStart(2, "0");
+  //   return `${h}:${m}:${s}`;
+  // }
 
   function checkFinishers() {
     data.forEach((d) => {
@@ -381,25 +381,25 @@ d3.csv("./assets/simulation-d3.csv").then((data) => {
     });
   }
 
-  function updateLabels() {
-    data.forEach((d) => {
-      const realTime = currentTime / realToSimRatio;
-      const distance = Math.min(d.speed * realTime, 42195);
+  // function updateLabels() {
+  //   data.forEach((d) => {
+  //     const realTime = currentTime / realToSimRatio;
+  //     const distance = Math.min(d.speed * realTime, 42195);
 
-      if (distance >= 42195) {
-        // Assuming 'd.label' is the selection of label for participant 'd'
-        d.label.text(
-          `Finished: ${formatTime(d.total_seconds)} | Distance: 42.195 km`
-        );
-      } else {
-        d.label.text(
-          `Running: ${formatTime(realTime)} | Distance: ${distance.toFixed(
-            2
-          )} km`
-        );
-      }
-    });
-  }
+  //     if (distance >= 42195) {
+  //       // Assuming 'd.label' is the selection of label for participant 'd'
+  //       d.label.text(
+  //         `Finished: ${formatTime(d.total_seconds)} | Distance: 42.195 km`
+  //       );
+  //     } else {
+  //       d.label.text(
+  //         `Running: ${formatTime(realTime)} | Distance: ${distance.toFixed(
+  //           2
+  //         )} km`
+  //       );
+  //     }
+  //   });
+  // }
 
   function updateBarsAndIcons() {
     bars.attr("width", (d) => {
